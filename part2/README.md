@@ -18,3 +18,5 @@ The array stores elements of a similar, generic type <T> at the array's indices.
     - Identifying whether or not the array is empty 
     - Printing all elements in the array 
 
+
+We included an object class that serves as the parent class for the array. Its functionality includes object equality checks and hash computation. Object equality is defined by comparing memory addresses. Hash computation returns the object's hash value such that objects that are equal have the same hash. Objects that are not equal may have the same hash. These functions are virtual and should be implemented by the child classes (e.g Array).
