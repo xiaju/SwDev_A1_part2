@@ -2,7 +2,7 @@
 #pragma once
 
 #include <assert.h>
-
+#include "object.h"
 
 //represents a string, or list of characters
 class String : public Object {
