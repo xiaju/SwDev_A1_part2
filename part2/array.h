@@ -31,7 +31,7 @@ class BoolArray : public Object {
 	public:
 
 		BoolArray(); //default constructor
-		BoolArray(size_t size, int* vals); //convenience constructor, initializes new Array with all elements given
+		BoolArray(size_t size, bool* vals); //convenience constructor, initializes new Array with all elements given
 		
 		~BoolArray(); //destructor
 
