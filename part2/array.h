@@ -88,11 +88,11 @@ class StringArray : public Object {
 		void add_all(size_t i, StringArray* c); // Inserts all of elements in c into this list at i
 		void clear(); // Removes all of elements from this list
 		virtual bool equals(Object* o); // Compares o with this list for equality.
-		char* get(size_t index); // Returns the element at index
+		String* get(size_t index); // Returns the element at index
 		virtual size_t hash(); // Returns the hash code value for this list.
 		size_t index_of(char* o); // Returns the index of the first occurrence of o, or >size() if not there
-		char* remove(size_t i); //Removes the element at i, returns the removed element 
-		char* set(size_t i, char* e); // Replaces the element at i with e
+		String* remove(size_t i); //Removes the element at i, returns the removed element 
+		String* set(size_t i, char* e); // Replaces the element at i with e
 		size_t size(); // Return the number of elements in the collection
 		bool is_empty(); // Is this array empty (0 elements stored)?
 		void print(); // Print this object including the elements it stores
