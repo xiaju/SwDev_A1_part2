@@ -1,18 +1,29 @@
 #pragma once
-//lang::CwC
-#include <stdlib.h> //Used for size_t which is ok according to TA (piazza post)
+#ifndef ASSIGNMENT1_PART2_OBJECT_H
+#define ASSIGNMENT1_PART2_OBJECT_H
 
-// Represents the top of the object hierarchy.                                                  
+#endif //ASSIGNMENT1_PART2_OBJECT_H
+#include <stdlib.h>
+
 class Object {
-	public:
-	 	Object();
-	 	virtual ~Object(); //destructor virtual to support subclasses   
+public:
+    Object() {
+      
+    }
 
-	 	/* Returns the object's hash value. 
-		 * Objects that are equal have the same hash. 
-		 * Objects that are not equal may have the same hash. Should be implemented by subclasses
-		 */
-		virtual size_t hash();
-		virtual bool equals(Object* other); // check equality between this object and other
+    virtual ~Object() {
+
+    }
+
+    virtual size_t hash() {
+      return reinterpret_cast<size_t>(this);
+    }
+
+    virtual bool equals(Object* object) {
+      this == object;
+    }
+
+    virtual void print() {
+      
+    }
 };
-
